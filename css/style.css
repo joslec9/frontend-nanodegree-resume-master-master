@@ -79,6 +79,11 @@ a {
   display: block;
 }
 
+img {
+	max-width: 100%;
+  display: inline-block;
+}
+
 .welcome-message {
   font-style: italic;
   font-size: 18px;
@@ -88,7 +93,7 @@ a {
 
 .lower-three-quarters {
   border: 2px solid #0070ef;
-  max-width: 1125px;
+  max-width: 100%;
   margin: auto;
   position: relative;
   -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 207, 1);
@@ -103,7 +108,7 @@ a {
   -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
-  font: 20px solid;
+  font: 24px solid;
 }
 
 #skillsH3 li {
@@ -142,6 +147,35 @@ a {
 .dark-gray {
   background-color: #4A4A4A;
 }
+
+.container  {
+  align-content: center;
+  position: relative;
+  padding-left: 30px;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+   }
+
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+    }
+
+ }
+
 
 /* TODO: Replace with image later */
 #header {
