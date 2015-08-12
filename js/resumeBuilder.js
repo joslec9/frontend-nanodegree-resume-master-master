@@ -54,7 +54,6 @@ $("#header").append(formattedBio);
 for (var contact in bio.contacts) {
 var formattedContact = HTMLcontactGeneric.replace("%contact%", contact).replace("%data%", bio.contacts[contact]);
 
-
 $("#topContacts").append(formattedContact);
 $("#footerContacts").append(formattedContact);
 
@@ -248,7 +247,7 @@ function inName(name) {
 
 }
 
-$('#main').append(internationalizeButton);
+$("#main").append(internationalizeButton);
 
 
 $("#mapDiv").append(googleMap);
