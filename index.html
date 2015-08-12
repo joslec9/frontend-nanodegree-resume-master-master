@@ -53,18 +53,29 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div class="container">
     <div class="lower-three-quarters">
     <div style='clear: both;'></div>
+    <div class="personal-experience">
     <div id="workExperience" class='gray'>
       <h2>Work Experience</h2>
+      <div class="riser">
+        <img class="logo" src="https://media.licdn.com/media/p/2/000/1c0/055/3d799eb.png">
     </div>
+  </div>
+</div>
+    <div class="personal-projects">
     <div id="projects">
       <h2>Projects</h2>
     </div>
+  </div>
+  <div class="personal-education">
     <div id="education" class='gray'>
       <h2>Education</h2>
     </div>
+  </div>
+  <div class="personal-experience">
     <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
     </div>
+  </div>
     <div id="letsConnect" class='dark-gray'>
       <h2 class='orange center-text'>Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
@@ -115,13 +126,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('workExperience').style.display = 'none';
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'black';
+      document.getElementById('projects').style.display = 'none';
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'black';
+      document.getElementById('education').style.display = 'none';
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('letsConnect').style.display = 'black';
+      document.getElementById('letsConnect').style.display = 'none';
     }
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.display = 'none';

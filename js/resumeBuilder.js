@@ -13,7 +13,7 @@ var bio = {
 	"JS", "HTML", "CSS", "bootstrap", "jQuery", "responsive-web-design"
 ],
 	"biopic":"images/biopic.jpg"
-}
+};
 
 bio.display = function(){
 
@@ -141,6 +141,7 @@ for (job in work.jobs)	{
 
 	var formattedLocation=HTMLworkLocation.replace("%data%",work.jobs[job].location);
 	$(".work-entry:last").append(formattedLocation);
+
 	}
 }
 
@@ -154,7 +155,8 @@ var education = {
             "degree": "Culinary Arts",
             "location": "Hyde Park, NY",
             "major": "Culinary Arts",
-            "dates": "2011"
+            "dates": "2011",
+						"schoolpic": "images/ciapic.jpg"
         }
     ],
     "onlineCourses": [
@@ -162,31 +164,36 @@ var education = {
             "title": "Intro to HTML & CSS",
             "school": "Udacity",
             "dates": "2015",
-            "url": "www.udacity.com/course/intro-to-html-and-css--ud304"
+            "url": "www.udacity.com/course/intro-to-html-and-css--ud304",
+						"onlinepic": "images/udacitypic.jpg"
         },
         {
             "title": "How to use Git & Github",
             "school": "Udacity",
             "dates": "2015",
-            "url": "https://www.udacity.com/course/how-to-use-git-and-github--ud775"
+            "url": "https://www.udacity.com/course/how-to-use-git-and-github--ud775",
+						"onlinepic": "images/udacitypic.jpg"
         },
         {
             "title": "Responsive Images",
             "school": "Udacity",
             "dates": "2015",
-            "url": "https://www.udacity.com/course/responsive-images--ud882"
+            "url": "https://www.udacity.com/course/responsive-images--ud882",
+						"onlinepic": "images/udacitypic.jpg"
         },
         {
             "title": "Responsive Web Design Fundumentals",
             "school": "Udacity",
             "dates": "2015",
-            "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
+            "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893",
+						"onlinepic": "images/udacitypic.jpg"
         },
         {
             "title": "Javascript Basics",
             "school": "Udacity",
-            "dates": "015",
-            "url": "https://www.udacity.com/course/javascript-basics--ud804"
+            "dates": "2015",
+            "url": "https://www.udacity.com/course/javascript-basics--ud804",
+						"onlinepic": "images/udacitypic.jpg"
         }
     ]
 }
@@ -199,14 +206,15 @@ for (school in education.schools) {
 	var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 	var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 	var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-	var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major); }
-
+	var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+	var	formattedPic= HTMLschoolPic.replace("%data%",education.schools[school].schoolpic);
 
 $(".education-entry").append(formattedName);
 $(".education-entry").append(formattedDegree);
 $(".education-entry").append(formattedDates);
 $(".education-entry").append(formattedLocation);
 $(".education-entry").append(formattedMajor);
+$(".education-entry").append(formattedPic);
 
 	$(".education-entry").append(HTMLonlineClasses);
 	for (onCourse in education.onlineCourses) {
@@ -214,11 +222,14 @@ $(".education-entry").append(formattedMajor);
 		var formattedSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[onCourse].school);
 		var formattedtDates = HTMLonlineDates.replace("%data%",education.onlineCourses[onCourse].dates);
 		var formattedUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[onCourse].url);
+		var	formattedOnlinePic= HTMLonlinePic.replace("%data%",education.onlineCourses[onCourse].onlinepic);
+
 		$(".education-entry").append(formattedTitle);
 		$(".education-entry").append(formattedSchool);
 		$(".education-entry").append(formattedDates);
 		$(".education-entry").append(formattedUrl);
-
+		$(".education-entry").append(formattedOnlinePic);
+		}
 	}
 }
 

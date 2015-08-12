@@ -9,7 +9,7 @@
 }
 
 .education-entry, .work-entry, .project-entry {
-  padding-left: 5%;
+  padding-left: 10%;
   padding-right: 5%;
 }
 
@@ -23,15 +23,16 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
-  line-height: 29px;
+  color: #ffffff;
+  line-height: 20px;
   padding: 10px;
+  border: 2px solid #0070ef;
+  background-color: #0070ef;
 }
 
 h3 {
-  font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #333333;
   line-height: 22px;
 }
 
@@ -43,7 +44,7 @@ h4 {
 }
 
 h2, h3, h4, h5 {
-  padding:10px;
+  padding:5px;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -92,7 +93,6 @@ img {
 }
 
 .lower-three-quarters {
-  border: 2px solid #0070ef;
   max-width: 100%;
   margin: auto;
   position: relative;
@@ -104,7 +104,7 @@ img {
 #skillsH3 {
   border: 2px solid #0070ef;
   background-color: #f2f2f2;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
   -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
@@ -124,6 +124,79 @@ img {
   margin-top: 6px;
   max-width: 100%;
 }
+
+.personal-experience {
+  border: 2px solid #0070ef;
+  background-color: #f2f2f2;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 207, 0.75);
+  -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 207, 0.75);
+  box-shadow: 0px 22px 87px -24px rgba(0, 0, 207, 0.75);
+  font: 24px solid;
+  display: flex;
+  align-items: flex-start;
+}
+
+.personal-experience a:hover {
+  color: #e0dede;
+}
+
+.riser {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 10px 0px 10px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  padding: 25px 25px;
+  width: 10%;
+  height: 10%;
+  display: inline-block;
+}
+
+.personal-projects  {
+  border: 2px solid #0070ef;
+  background-color: #f2f2f2;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 207, 0.75);
+  -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 207, 0.75);
+  box-shadow: 0px 22px 87px -24px rgba(0, 0, 207, 0.75);
+  font: 24px solid;
+}
+
+.personal-projects a:hover {
+  color: #e0dede;
+}
+
+.personal-education  {
+  border: 2px solid #0070ef;
+  background-color: #f2f2f2;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 22px 87px -24px rgba(0, 0, 0, 0.75);
+  font: 24px solid;
+}
+
+.personal-education a:hover {
+  color: #e0dede;
+}
+
+.cia {
+  padding: 0px 10px 0px 10px;
+  margin-bottom: 10px
+}
+
+.ed-logo  {
+  width: 80px;
+  height: 80px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  display: inline-block;
+}
+
 
 .orange {
   background-color: #F5AE23;
