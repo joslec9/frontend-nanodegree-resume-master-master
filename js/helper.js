@@ -58,6 +58,12 @@ var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var HTMLonlinePic = '<img src="%data%" class="onlinepic">';
 
+var HTMLmilitaryStart = '<div class="work-entry"></div>';
+var HTMLmilitaryEmployer = '<a href="#">%data%';
+var HTMLmilitaryTitle = ' - %data%</a>';
+var HTMLmilitaryDates = '<div class="date-text">%data%</div>';
+var HTMLmilitaryDescription = '<p><br>%data%</p>';
+
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';

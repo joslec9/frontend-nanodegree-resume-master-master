@@ -10,36 +10,37 @@ var bio = {
 	},
 	"welcomeMessage":"Front-End Web Ninja",
 	"skills": [
-	"JS", "HTML", "CSS", "bootstrap", "jQuery", "responsive-web-design"
+	"JavaScript", "HTML", "CSS", "Bootstrap", "jQuery", "Responsive-web-design"
 ],
-	"biopic":"images/biopic.jpg"
+	"biopic":[
+		"images/biopic.jpg"
+	]
 };
 
 bio.display = function(){
+	if(bio.skills.length>= 0)	{
+		$("#header").append(HTMLskillsStart);
 
-if(bio.skills.length>= 0)	{
-	$("#header").append(HTMLskillsStart);
+		var formattedskills=HTMLskills.replace("%data%",bio.skills[0]);
+		$("#skills").append(formattedskills);
 
-	var formattedskills=HTMLskills.replace("%data%",bio.skills[0]);
-	$("#skillsH3").append(formattedskills);
+		var formattedskills=HTMLskills.replace("%data%",bio.skills[1]);
+		$("#skills").append(formattedskills);
 
-	var formattedskills=HTMLskills.replace("%data%",bio.skills[1]);
-	$("#skillsH3").append(formattedskills);
+		var formattedskills=HTMLskills.replace("%data%",bio.skills[2]);
+		$("#skills").append(formattedskills);
 
-	var formattedskills=HTMLskills.replace("%data%",bio.skills[2]);
-	$("#skillsH3").append(formattedskills);
+		var formattedskills=HTMLskills.replace("%data%",bio.skills[3]);
+		$("#skills").append(formattedskills);
 
-	var formattedskills=HTMLskills.replace("%data%",bio.skills[3]);
-	$("#skillsH3").append(formattedskills);
+		var formattedskills=HTMLskills.replace("%data%",bio.skills[4]);
+		$("#skills").append(formattedskills);
 
-	var formattedskills=HTMLskills.replace("%data%",bio.skills[4]);
-	$("#skillsH3").append(formattedskills);
+		var formattedskills=HTMLskills.replace("%data%",bio.skills[5]);
+		$("#skills").append(formattedskills);
 
-	var formattedskills=HTMLskills.replace("%data%",bio.skills[5]);
-	$("#skillsH3").append(formattedskills);
-
-	}
-}
+		}
+	};
 
 var formattedName= HTMLheaderName.replace("%data%",bio.name);
 var formattedRole= HTMLheaderRole.replace("%data%",bio.role);
@@ -66,19 +67,26 @@ var projects = {
 	"projects": [
 		{
 			"title": "Portfolio Website",
-			"site": "add later",
+			"site": "http://joslec9.github.io/primary-portfolio",
 			"dates": "2015",
 			"description": "Built the basis of my portfolio website using bootstrap, html5 & css.",
-		"image": [
-			"images/portfolio page.jpg"
-			]
-		}
+		"image":
+			"images/portfolio.jpg"
+		},
+		{
+			"title": "About Me",
+			"site": "http://joslec9.github.io/primary-portfolio",
+			"dates": "2015",
+			"description": "Built the basis of my portfolio website using bootstrap, html5 & css.",
+		"image":
+			"images/profilepage.jpg"
+		},
 	]
-}
+};
 
 
 projects.display = function() {
-	for (project in projects.projects) {
+	for (var project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 
 		var formattedTitle = HTMLprojectTitle.replace("%data%",projects.projects[project].title);
@@ -91,13 +99,13 @@ projects.display = function() {
 		$(".project-entry:last").append(formattedDescription);
 
 		if (projects.projects[project].image.length > 0)	{
-			for (image in projects.projects[project].image)	{
+			for (var image in projects.projects[project].image)	{
 				var formattedImages= HTMLprojectImage.replace("%data%",projects.projects[project].image[image]);
 				$(".project-entry:last").append(formattedImages);
 			}
 		}
 	}
-}
+};
 
 projects.display();
 
@@ -108,24 +116,21 @@ var work = {
 		"employer": "California pizza Kitchen",
 		"title": "Regional Culinary Manager",
 		"dates": "2013-present",
-		"location":"Paramus, NJ",
+		"location":",Scarsdale, NY",
 		"description": "Collaborate with the Regional Partner in the development of General Managers and Kitchen Managers in areas of P&L, Labor, controllable’s, financial operations, food quality, recipe execution, Inventory, training and development."
-		}
+		},
+		{
+		"employer": "California pizza Kitchen",
+		"title": "Kitchen Manager",
+		"dates": " Feb 2013-sept 2013 ",
+		"location":"Scarsdale, NY",
+		"description": "Accountable for all food ordering, pars, quality of product, organization of kitchen, rotation of product, and recipe execution to company standards, Health Inspection standards"
+		},
 	]
-}
-
-function locationizer(work_obj)	{
-	var locationArray = [];
-
-	for ( job in work_obj.job)	{
-		var newLocation = work_obj.jobs[job].location;
-		locationArray.push(newLocation);
-	}
-	return locationArray;
-}
+};
 
 work.display = function() {
-for (job in work.jobs)	{
+for (var job in work.jobs)	{
 	$("#workExperience").append(HTMLworkStart);
 
 	var formattedEmployer=HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
@@ -143,7 +148,7 @@ for (job in work.jobs)	{
 	$(".work-entry:last").append(formattedLocation);
 
 	}
-}
+};
 
 work.display();
 
@@ -196,12 +201,12 @@ var education = {
 						"onlinepic": "images/udacitypic.jpg"
         }
     ]
-}
+};
 
 education.display = function() {
 
 $("#education").append(HTMLschoolStart);
-for (school in education.schools) {
+for (var school in education.schools) {
 	var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
 	var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
 	var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
@@ -215,26 +220,57 @@ $(".education-entry").append(formattedDates);
 $(".education-entry").append(formattedLocation);
 $(".education-entry").append(formattedMajor);
 $(".education-entry").append(formattedPic);
+}
 
 	$(".education-entry").append(HTMLonlineClasses);
-	for (onCourse in education.onlineCourses) {
+	for (var onCourse in education.onlineCourses) {
 		var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[onCourse].title);
 		var formattedSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[onCourse].school);
-		var formattedtDates = HTMLonlineDates.replace("%data%",education.onlineCourses[onCourse].dates);
+		var formattedonlineDates = HTMLonlineDates.replace("%data%",education.onlineCourses[onCourse].dates);
 		var formattedUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[onCourse].url);
 		var	formattedOnlinePic= HTMLonlinePic.replace("%data%",education.onlineCourses[onCourse].onlinepic);
 
 		$(".education-entry").append(formattedTitle);
 		$(".education-entry").append(formattedSchool);
-		$(".education-entry").append(formattedDates);
+		$(".education-entry").append(formattedonlineDates);
 		$(".education-entry").append(formattedUrl);
 		$(".education-entry").append(formattedOnlinePic);
 		}
-	}
-}
+	};
 
 
 education.display();
+
+var military = {
+	"military": [
+		{
+		"employer": "United States Marine Corp.",
+		"title": "Motortransport Operator",
+		"dates": "2004-2006",
+		"description": "Responsible for vehicle operations in troop transport and cargo transports, responsible of million dollar equipment and cargo. Coordinated, supervised, implemented various missions and operations, in many cases making decisions under stressful, and extreme hazardous conditions."
+		}
+	]
+};
+
+	military.display = function() {
+	for (var job in military.military)	{
+		$("#militaryExperience").append(HTMLmilitaryStart);
+
+		var formattedEmployer=HTMLmilitaryEmployer.replace("%data%",military.military[job].employer);
+		var formattedTitle=HTMLmilitaryTitle.replace("%data%",military.military[job].title);
+		var formattedEmployerTitle=formattedEmployer + formattedTitle;
+		$(".work-entry:last").append(formattedEmployerTitle);
+
+		var formattedDates=HTMLmilitaryDates.replace("%data%",military.military[job].dates);
+		$(".work-entry:last").append(formattedDates);
+
+		var formattedDescription=HTMLmilitaryDescription.replace("%data%",military.military[job].description);
+		$(".work-entry:last").append(formattedDescription);
+		}
+	};
+
+	military.display();
+
 // END OF WORK ALL MISC FROM HEREON IN
 
 $(document).click(function(loc) {
