@@ -10,14 +10,14 @@ var bio = {
 	},
 	"welcomeMessage":"Front-End Web Ninja",
 	"skills": [
-	"JavaScript", "HTML", "CSS", "Bootstrap", "jQuery", "Responsive-web-design"
+	"JavaScript", "HTML", "CSS", "Bootstrap", "jQuery", "Responsive-Web-Design"
 ],
 	"biopic":[
 		"images/biopic.jpg"
 	]
 };
 
-bio.display = function(){
+bio.display = function() {
 	if(bio.skills.length>= 0)	{
 		$("#header").append(HTMLskillsStart);
 
@@ -58,7 +58,7 @@ var formattedContact = HTMLcontactGeneric.replace("%contact%", contact).replace(
 $("#topContacts").append(formattedContact);
 $("#footerContacts").append(formattedContact);
 
-}
+};
 
 bio.display();
 
@@ -77,11 +77,11 @@ var projects = {
 			"title": "About Me",
 			"site": "http://joslec9.github.io/primary-portfolio",
 			"dates": "2015",
-			"description": "Built the basis of my portfolio website using bootstrap, html5 & css.",
+			"description": "Built the basis of my portfolio website using HTML & CSS.",
 		"image":
 			"images/profilepage.jpg"
-		},
-	]
+			}
+		]
 };
 
 
@@ -99,8 +99,8 @@ projects.display = function() {
 		$(".project-entry:last").append(formattedDescription);
 
 		if (projects.projects[project].image.length > 0)	{
-			for (var image in projects.projects[project].image)	{
-				var formattedImages= HTMLprojectImage.replace("%data%",projects.projects[project].image[image]);
+			for (var image in projects.projects[project].image) {
+				var formattedImages = HTMLprojectImage.replace("%data%",projects.projects[project].image[image]);
 				$(".project-entry:last").append(formattedImages);
 			}
 		}
