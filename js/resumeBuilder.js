@@ -70,18 +70,11 @@ var projects = {
 			"site": "http://joslec9.github.io/primary-portfolio",
 			"dates": "2015",
 			"description": "Built the basis of my portfolio website using bootstrap, html5 & css.",
-		"image":
-			"images/portfolio.jpg"
-		},
-		{
-			"title": "About Me",
-			"site": "http://joslec9.github.io/primary-portfolio",
-			"dates": "2015",
-			"description": "Built the basis of my portfolio website using HTML & CSS.",
-		"image":
-			"images/profilepage.jpg"
-			}
-		]
+		"image": [
+			"images/portfoliopage.jpg"
+			]
+		}
+	]
 };
 
 
@@ -98,14 +91,10 @@ projects.display = function() {
 		var formattedDescription = HTMLprojectDescription.replace("%data%",projects.projects[project].description);
 		$(".project-entry:last").append(formattedDescription);
 
-		if (projects.projects[project].image.length > 0)	{
-			for (var image in projects.projects[project].image) {
-				var formattedImages = HTMLprojectImage.replace("%data%",projects.projects[project].image[image]);
-				$(".project-entry:last").append(formattedImages);
+		var formattedImages = HTMLprojectImage.replace("%data%",projects.projects[project].image);
+		$(".project-entry:last").append(formattedImages);
 			}
-		}
-	}
-};
+	};
 
 projects.display();
 
